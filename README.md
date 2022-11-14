@@ -1,5 +1,5 @@
 Approximate Time Per Task
-1. Project setup ~ 10 m
+1. Project setup ~ 10 minutes
 2. Initial DB with liquibase ~ 30 minutes
 3. APIs And Project structure (Initial Controllers, Services, Entities etc) ~ 2 hours
 4. CORS ~ 15 minutes
