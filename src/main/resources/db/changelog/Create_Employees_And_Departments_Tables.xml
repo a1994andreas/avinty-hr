@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="Create_Employees_Table" author="Andreas Paravoliasis">
+        <createTable tableName="employees">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="password" type="VARCHAR(66)"/>
+            <column name="full_name" type="VARCHAR(200)"/>
+            <column name="dep_id" type="INT">
+
+            </column>
+            <column name="created_at" type="TIMESTAMP"/>
+            <column name="created_by" type="INT"/>
+            <column name="updated_at" type="TIMESTAMP"/>
+            <column name="updated_by" type="INT"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="Create_Departments_Table" author="Andreas Paravoliasis">
+        <createTable tableName="departments">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(100)"/>
+            <column name="manager_id" type="INT"/>
+            <column name="created_at" type="TIMESTAMP"/>
+            <column name="created_by" type="INT"/>
+            <column name="updated_at" type="TIMESTAMP"/>
+            <column name="updated_by" type="INT"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
